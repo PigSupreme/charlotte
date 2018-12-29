@@ -1,0 +1,10 @@
+---
+# Deafault board colors
+BEAM: '#ee11ee'
+EXIT_CLOSED: '#ee3344'
+EXIT_OPEN: '#11eeee'
+FLOOR: '#bbbbbb'
+LIGHT_OFF: '#ff7f00'
+LIGHT_ON: '#eeee11'
+PASSAGE: '#22aa33'
+WALL: '#000000'

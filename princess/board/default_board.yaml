@@ -1,0 +1,945 @@
+!!python/object:networkx.classes.graph.Graph
+_adj:
+  ? &id016 !!python/tuple [0, 0]
+  : ? &id015 !!python/tuple [1, 0]
+    : &id017 {}
+  ? &id002 !!python/tuple [0, 2]
+  : ? &id001 !!python/tuple [0, 3]
+    : &id003 {}
+    ? &id018 !!python/tuple [1, 1]
+    : &id019 {}
+    ? &id004 !!python/tuple [1, 2]
+    : &id022 {}
+  *id001:
+    *id002: *id003
+    ? &id005 !!python/tuple [0, 4]
+    : &id006 {}
+    *id004: &id023 {}
+    ? &id007 !!python/tuple [1, 3]
+    : &id026 {}
+  *id005:
+    *id001: *id006
+    ? &id008 !!python/tuple [0, 5]
+    : &id009 {}
+    *id007: &id027 {}
+    ? &id010 !!python/tuple [1, 4]
+    : &id030 {}
+  *id008:
+    *id005: *id009
+    ? &id011 !!python/tuple [0, 6]
+    : &id012 {}
+    *id010: &id031 {}
+    ? &id013 !!python/tuple [1, 5]
+    : &id034 {}
+  *id011:
+    *id008: *id012
+    *id013: &id035 {}
+    ? &id014 !!python/tuple [1, 6]
+    : &id038 {}
+  ? &id039 !!python/tuple [0, 7]
+  : *id014: &id040 {}
+  *id015:
+    *id016: *id017
+    *id018: &id020 {}
+    ? &id021 !!python/tuple [2, 0]
+    : &id043 {}
+  *id018:
+    *id002: *id019
+    *id015: *id020
+    *id004: &id024 {}
+    *id021: &id044 {}
+    ? &id025 !!python/tuple [2, 1]
+    : &id045 {}
+  *id004:
+    *id002: *id022
+    *id001: *id023
+    *id018: *id024
+    *id007: &id028 {}
+    *id025: &id046 {}
+    ? &id029 !!python/tuple [2, 2]
+    : &id049 {}
+  *id007:
+    *id001: *id026
+    *id005: *id027
+    *id004: *id028
+    *id010: &id032 {}
+    *id029: &id050 {}
+    ? &id033 !!python/tuple [2, 3]
+    : &id053 {}
+  *id010:
+    *id005: *id030
+    *id008: *id031
+    *id007: *id032
+    *id013: &id036 {}
+    *id033: &id054 {}
+    ? &id037 !!python/tuple [2, 4]
+    : &id057 {}
+  *id013:
+    *id008: *id034
+    *id011: *id035
+    *id010: *id036
+    *id014: &id041 {}
+    *id037: &id058 {}
+    ? &id042 !!python/tuple [2, 5]
+    : &id061 {}
+  *id014:
+    *id011: *id038
+    *id039: *id040
+    *id013: *id041
+    *id042: &id062 {}
+  *id021:
+    *id015: *id043
+    *id018: *id044
+    *id025: &id047 {}
+    ? &id065 !!python/tuple [3, -1]
+    : &id066 {}
+    ? &id048 !!python/tuple [3, 0]
+    : &id067 {}
+  *id025:
+    *id018: *id045
+    *id004: *id046
+    *id021: *id047
+    *id029: &id051 {}
+    *id048: &id068 {}
+    ? &id052 !!python/tuple [3, 1]
+    : &id071 {}
+  *id029:
+    *id004: *id049
+    *id007: *id050
+    *id025: *id051
+    *id033: &id055 {}
+    *id052: &id072 {}
+    ? &id056 !!python/tuple [3, 2]
+    : &id075 {}
+  *id033:
+    *id007: *id053
+    *id010: *id054
+    *id029: *id055
+    *id037: &id059 {}
+    *id056: &id076 {}
+    ? &id060 !!python/tuple [3, 3]
+    : &id079 {}
+  *id037:
+    *id010: *id057
+    *id013: *id058
+    *id033: *id059
+    *id042: &id063 {}
+    *id060: &id080 {}
+    ? &id064 !!python/tuple [3, 4]
+    : &id083 {}
+  *id042:
+    *id013: *id061
+    *id014: *id062
+    *id037: *id063
+    *id064: &id084 {}
+  *id065:
+    *id021: *id066
+    *id048: &id069 {}
+    ? &id087 !!python/tuple [4, -2]
+    : &id088 {}
+    ? &id070 !!python/tuple [4, -1]
+    : &id089 {}
+  *id048:
+    *id021: *id067
+    *id025: *id068
+    *id065: *id069
+    *id052: &id073 {}
+    *id070: &id090 {}
+    ? &id074 !!python/tuple [4, 0]
+    : &id093 {}
+  *id052:
+    *id025: *id071
+    *id029: *id072
+    *id048: *id073
+    *id056: &id077 {}
+    *id074: &id094 {}
+    ? &id078 !!python/tuple [4, 1]
+    : &id097 {}
+  *id056:
+    *id029: *id075
+    *id033: *id076
+    *id052: *id077
+    *id060: &id081 {}
+    *id078: &id098 {}
+    ? &id082 !!python/tuple [4, 2]
+    : &id101 {}
+  *id060:
+    *id033: *id079
+    *id037: *id080
+    *id056: *id081
+    *id064: &id085 {}
+    *id082: &id102 {}
+    ? &id086 !!python/tuple [4, 3]
+    : &id105 {}
+  *id064:
+    *id037: *id083
+    *id042: *id084
+    *id060: *id085
+    *id086: &id106 {}
+    ? &id108 !!python/tuple [4, 4]
+    : &id110 {}
+  *id087:
+    *id065: *id088
+    *id070: &id091 {}
+    ? &id113 !!python/tuple [5, -3]
+    : &id114 {}
+    ? &id092 !!python/tuple [5, -2]
+    : &id115 {}
+  *id070:
+    *id065: *id089
+    *id048: *id090
+    *id087: *id091
+    *id074: &id095 {}
+    *id092: &id116 {}
+    ? &id096 !!python/tuple [5, -1]
+    : &id119 {}
+  *id074:
+    *id048: *id093
+    *id052: *id094
+    *id070: *id095
+    *id078: &id099 {}
+    *id096: &id120 {}
+    ? &id100 !!python/tuple [5, 0]
+    : &id123 {}
+  *id078:
+    *id052: *id097
+    *id056: *id098
+    *id074: *id099
+    *id082: &id103 {}
+    *id100: &id124 {}
+    ? &id104 !!python/tuple [5, 1]
+    : &id127 {}
+  *id082:
+    *id056: *id101
+    *id060: *id102
+    *id078: *id103
+    *id086: &id107 {}
+    *id104: &id128 {}
+    ? &id109 !!python/tuple [5, 2]
+    : &id131 {}
+  *id086:
+    *id060: *id105
+    *id064: *id106
+    *id082: *id107
+    *id108: &id111 {}
+    *id109: &id132 {}
+    ? &id112 !!python/tuple [5, 3]
+    : &id135 {}
+  *id108:
+    *id064: *id110
+    *id086: *id111
+    *id112: &id136 {}
+    ? &id138 !!python/tuple [5, 4]
+    : &id140 {}
+  *id113:
+    *id087: *id114
+    *id092: &id117 {}
+    ? &id118 !!python/tuple [6, -3]
+    : &id143 {}
+  *id092:
+    *id087: *id115
+    *id070: *id116
+    *id113: *id117
+    *id096: &id121 {}
+    *id118: &id144 {}
+    ? &id122 !!python/tuple [6, -2]
+    : &id145 {}
+  *id096:
+    *id070: *id119
+    *id074: *id120
+    *id092: *id121
+    *id100: &id125 {}
+    *id122: &id146 {}
+    ? &id126 !!python/tuple [6, -1]
+    : &id149 {}
+  *id100:
+    *id074: *id123
+    *id078: *id124
+    *id096: *id125
+    *id104: &id129 {}
+    *id126: &id150 {}
+    ? &id130 !!python/tuple [6, 0]
+    : &id153 {}
+  *id104:
+    *id078: *id127
+    *id082: *id128
+    *id100: *id129
+    *id109: &id133 {}
+    *id130: &id154 {}
+    ? &id134 !!python/tuple [6, 1]
+    : &id157 {}
+  *id109:
+    *id082: *id131
+    *id086: *id132
+    *id104: *id133
+    *id112: &id137 {}
+    *id134: &id158 {}
+    ? &id139 !!python/tuple [6, 2]
+    : &id161 {}
+  *id112:
+    *id086: *id135
+    *id108: *id136
+    *id109: *id137
+    *id138: &id141 {}
+    *id139: &id162 {}
+    ? &id142 !!python/tuple [6, 3]
+    : &id165 {}
+  *id138:
+    *id108: *id140
+    *id112: *id141
+    *id142: &id166 {}
+    ? &id168 !!python/tuple [6, 4]
+    : &id170 {}
+  *id118:
+    *id113: *id143
+    *id092: *id144
+    *id122: &id147 {}
+    ? &id148 !!python/tuple [7, -3]
+    : &id173 {}
+  *id122:
+    *id092: *id145
+    *id096: *id146
+    *id118: *id147
+    *id126: &id151 {}
+    *id148: &id174 {}
+    ? &id152 !!python/tuple [7, -2]
+    : &id175 {}
+  *id126:
+    *id096: *id149
+    *id100: *id150
+    *id122: *id151
+    *id130: &id155 {}
+    *id152: &id176 {}
+    ? &id156 !!python/tuple [7, -1]
+    : &id179 {}
+  *id130:
+    *id100: *id153
+    *id104: *id154
+    *id126: *id155
+    *id134: &id159 {}
+    *id156: &id180 {}
+    ? &id160 !!python/tuple [7, 0]
+    : &id183 {}
+  *id134:
+    *id104: *id157
+    *id109: *id158
+    *id130: *id159
+    *id139: &id163 {}
+    *id160: &id184 {}
+    ? &id164 !!python/tuple [7, 1]
+    : &id187 {}
+  *id139:
+    *id109: *id161
+    *id112: *id162
+    *id134: *id163
+    *id142: &id167 {}
+    *id164: &id188 {}
+    ? &id169 !!python/tuple [7, 2]
+    : &id191 {}
+  *id142:
+    *id112: *id165
+    *id138: *id166
+    *id139: *id167
+    *id168: &id171 {}
+    *id169: &id192 {}
+    ? &id172 !!python/tuple [7, 3]
+    : &id195 {}
+  *id168:
+    *id138: *id170
+    *id142: *id171
+    *id172: &id196 {}
+    ? &id198 !!python/tuple [7, 4]
+    : &id200 {}
+  *id148:
+    *id118: *id173
+    *id122: *id174
+    *id152: &id177 {}
+    ? &id178 !!python/tuple [8, -3]
+    : &id203 {}
+  *id152:
+    *id122: *id175
+    *id126: *id176
+    *id148: *id177
+    *id156: &id181 {}
+    *id178: &id204 {}
+    ? &id182 !!python/tuple [8, -2]
+    : &id205 {}
+  *id156:
+    *id126: *id179
+    *id130: *id180
+    *id152: *id181
+    *id160: &id185 {}
+    *id182: &id206 {}
+    ? &id186 !!python/tuple [8, -1]
+    : &id209 {}
+  *id160:
+    *id130: *id183
+    *id134: *id184
+    *id156: *id185
+    *id164: &id189 {}
+    *id186: &id210 {}
+    ? &id190 !!python/tuple [8, 0]
+    : &id213 {}
+  *id164:
+    *id134: *id187
+    *id139: *id188
+    *id160: *id189
+    *id169: &id193 {}
+    *id190: &id214 {}
+    ? &id194 !!python/tuple [8, 1]
+    : &id217 {}
+  *id169:
+    *id139: *id191
+    *id142: *id192
+    *id164: *id193
+    *id172: &id197 {}
+    *id194: &id218 {}
+    ? &id199 !!python/tuple [8, 2]
+    : &id221 {}
+  *id172:
+    *id142: *id195
+    *id168: *id196
+    *id169: *id197
+    *id198: &id201 {}
+    *id199: &id222 {}
+    ? &id202 !!python/tuple [8, 3]
+    : &id225 {}
+  *id198:
+    *id168: *id200
+    *id172: *id201
+    *id202: &id226 {}
+  *id178:
+    *id148: *id203
+    *id152: *id204
+    *id182: &id207 {}
+    ? &id208 !!python/tuple [9, -3]
+    : &id229 {}
+  *id182:
+    *id152: *id205
+    *id156: *id206
+    *id178: *id207
+    *id186: &id211 {}
+    *id208: &id230 {}
+    ? &id212 !!python/tuple [9, -2]
+    : &id231 {}
+  *id186:
+    *id156: *id209
+    *id160: *id210
+    *id182: *id211
+    *id190: &id215 {}
+    *id212: &id232 {}
+    ? &id216 !!python/tuple [9, -1]
+    : &id235 {}
+  *id190:
+    *id160: *id213
+    *id164: *id214
+    *id186: *id215
+    *id194: &id219 {}
+    *id216: &id236 {}
+    ? &id220 !!python/tuple [9, 0]
+    : &id239 {}
+  *id194:
+    *id164: *id217
+    *id169: *id218
+    *id190: *id219
+    *id199: &id223 {}
+    *id220: &id240 {}
+    ? &id224 !!python/tuple [9, 1]
+    : &id243 {}
+  *id199:
+    *id169: *id221
+    *id172: *id222
+    *id194: *id223
+    *id202: &id227 {}
+    *id224: &id244 {}
+    ? &id228 !!python/tuple [9, 2]
+    : &id247 {}
+  *id202:
+    *id172: *id225
+    *id198: *id226
+    *id199: *id227
+    *id228: &id248 {}
+  *id208:
+    *id178: *id229
+    *id182: *id230
+    *id212: &id233 {}
+    ? &id251 !!python/tuple [10, -4]
+    : &id252 {}
+    ? &id234 !!python/tuple [10, -3]
+    : &id253 {}
+  *id212:
+    *id182: *id231
+    *id186: *id232
+    *id208: *id233
+    *id216: &id237 {}
+    *id234: &id254 {}
+    ? &id238 !!python/tuple [10, -2]
+    : &id257 {}
+  *id216:
+    *id186: *id235
+    *id190: *id236
+    *id212: *id237
+    *id220: &id241 {}
+    *id238: &id258 {}
+    ? &id242 !!python/tuple [10, -1]
+    : &id261 {}
+  *id220:
+    *id190: *id239
+    *id194: *id240
+    *id216: *id241
+    *id224: &id245 {}
+    *id242: &id262 {}
+    ? &id246 !!python/tuple [10, 0]
+    : &id265 {}
+  *id224:
+    *id194: *id243
+    *id199: *id244
+    *id220: *id245
+    *id228: &id249 {}
+    *id246: &id266 {}
+    ? &id250 !!python/tuple [10, 1]
+    : &id269 {}
+  *id228:
+    *id199: *id247
+    *id202: *id248
+    *id224: *id249
+    *id250: &id270 {}
+  *id251:
+    *id208: *id252
+    *id234: &id255 {}
+    ? &id273 !!python/tuple [11, -5]
+    : &id274 {}
+    ? &id256 !!python/tuple [11, -4]
+    : &id275 {}
+  *id234:
+    *id208: *id253
+    *id212: *id254
+    *id251: *id255
+    *id238: &id259 {}
+    *id256: &id276 {}
+    ? &id260 !!python/tuple [11, -3]
+    : &id279 {}
+  *id238:
+    *id212: *id257
+    *id216: *id258
+    *id234: *id259
+    *id242: &id263 {}
+    *id260: &id280 {}
+    ? &id264 !!python/tuple [11, -2]
+    : &id283 {}
+  *id242:
+    *id216: *id261
+    *id220: *id262
+    *id238: *id263
+    *id246: &id267 {}
+    *id264: &id284 {}
+    ? &id268 !!python/tuple [11, -1]
+    : &id287 {}
+  *id246:
+    *id220: *id265
+    *id224: *id266
+    *id242: *id267
+    *id250: &id271 {}
+    *id268: &id288 {}
+    ? &id272 !!python/tuple [11, 0]
+    : &id291 {}
+  *id250:
+    *id224: *id269
+    *id228: *id270
+    *id246: *id271
+    *id272: &id292 {}
+    ? &id294 !!python/tuple [11, 1]
+    : &id296 {}
+  *id273:
+    *id251: *id274
+    *id256: &id277 {}
+    ? &id298 !!python/tuple [12, -6]
+    : &id299 {}
+    ? &id278 !!python/tuple [12, -5]
+    : &id300 {}
+  *id256:
+    *id251: *id275
+    *id234: *id276
+    *id273: *id277
+    *id260: &id281 {}
+    *id278: &id301 {}
+    ? &id282 !!python/tuple [12, -4]
+    : &id302 {}
+  *id260:
+    *id234: *id279
+    *id238: *id280
+    *id256: *id281
+    *id264: &id285 {}
+    *id282: &id303 {}
+    ? &id286 !!python/tuple [12, -3]
+    : &id305 {}
+  *id264:
+    *id238: *id283
+    *id242: *id284
+    *id260: *id285
+    *id268: &id289 {}
+    *id286: &id306 {}
+    ? &id290 !!python/tuple [12, -2]
+    : &id308 {}
+  *id268:
+    *id242: *id287
+    *id246: *id288
+    *id264: *id289
+    *id272: &id293 {}
+    *id290: &id309 {}
+    ? &id295 !!python/tuple [12, -1]
+    : &id311 {}
+  *id272:
+    *id246: *id291
+    *id250: *id292
+    *id268: *id293
+    *id294: &id297 {}
+    *id295: &id312 {}
+  *id294:
+    *id250: *id296
+    *id272: *id297
+    ? &id314 !!python/tuple [12, 1]
+    : &id315 {}
+  *id298:
+    *id273: *id299
+  *id278:
+    *id273: *id300
+    *id256: *id301
+    *id282: &id304 {}
+  *id282:
+    *id256: *id302
+    *id260: *id303
+    *id278: *id304
+    *id286: &id307 {}
+  *id286:
+    *id260: *id305
+    *id264: *id306
+    *id282: *id307
+    *id290: &id310 {}
+  *id290:
+    *id264: *id308
+    *id268: *id309
+    *id286: *id310
+    *id295: &id313 {}
+  *id295:
+    *id268: *id311
+    *id272: *id312
+    *id290: *id313
+  *id314:
+    *id294: *id315
+_node: &id317
+  *id016:
+    SPACE_TYPE: EXIT
+    GATE: false
+    pos: !!python/tuple [0.0, 8.0]
+  *id002:
+    SPACE_TYPE: PASSAGE
+    DOOR: false
+    pos: !!python/tuple [0.0, 6.0]
+  *id001:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [0.0, 5.0]
+  *id005:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [0.0, 4.0]
+  *id008:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [0.0, 3.0]
+  *id011:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [0.0, 2.0]
+  *id039:
+    SPACE_TYPE: EXIT
+    GATE: true
+    pos: !!python/tuple [0.0, 1.0]
+  *id015:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [0.8660254037844386, 7.5]
+  *id018:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [0.8660254037844386, 6.5]
+  *id004:
+    SPACE_TYPE: WALL
+    pos: !!python/tuple [0.8660254037844386, 5.5]
+    wall: true
+  *id007:
+    SPACE_TYPE: WALL
+    pos: !!python/tuple [0.8660254037844386, 4.5]
+    wall: true
+  *id010:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [0.8660254037844386, 3.5]
+  *id013:
+    SPACE_TYPE: WALL
+    shutoff: 1
+    pos: !!python/tuple [0.8660254037844386, 2.5]
+  *id014:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [0.8660254037844386, 1.5]
+  *id021:
+    SPACE_TYPE: WALL
+    shutoff: 3
+    pos: !!python/tuple [1.7320508075688772, 7.0]
+  *id025:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [1.7320508075688772, 6.0]
+  *id029:
+    SPACE_TYPE: WALL
+    pos: !!python/tuple [1.7320508075688772, 5.0]
+    wall: true
+  *id033:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [1.7320508075688772, 4.0]
+  *id037:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [1.7320508075688772, 3.0]
+  *id042:
+    SPACE_TYPE: PASSAGE
+    DOOR: true
+    pos: !!python/tuple [1.7320508075688772, 2.0]
+  *id065:
+    SPACE_TYPE: WALL
+    pos: !!python/tuple [2.598076211353316, 7.5]
+    wall: true
+  *id048:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [2.598076211353316, 6.5]
+  *id052:
+    SPACE_TYPE: WALL
+    pos: !!python/tuple [2.598076211353316, 5.5]
+    wall: true
+  *id056:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [2.598076211353316, 4.5]
+  *id060:
+    SPACE_TYPE: WALL
+    pos: !!python/tuple [2.598076211353316, 3.5]
+    wall: true
+  *id064:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [2.598076211353316, 2.5]
+  *id087:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [3.4641016151377544, 8.0]
+  *id070:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [3.4641016151377544, 7.0]
+  *id074:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [3.4641016151377544, 6.0]
+  *id078:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [3.4641016151377544, 5.0]
+  *id082:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [3.4641016151377544, 4.0]
+  *id086:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [3.4641016151377544, 3.0]
+  *id108:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [3.4641016151377544, 2.0]
+  *id113:
+    SPACE_TYPE: PASSAGE
+    DOOR: false
+    pos: !!python/tuple [4.330127018922193, 8.5]
+  *id092:
+    SPACE_TYPE: WALL
+    shutoff: 0
+    pos: !!python/tuple [4.330127018922193, 7.5]
+  *id096:
+    SPACE_TYPE: WALL
+    pos: !!python/tuple [4.330127018922193, 6.5]
+    wall: true
+  *id100:
+    SPACE_TYPE: PASSAGE
+    DOOR: false
+    pos: !!python/tuple [4.330127018922193, 5.5]
+  *id104:
+    SPACE_TYPE: WALL
+    pos: !!python/tuple [4.330127018922193, 4.5]
+    wall: true
+  *id109:
+    SPACE_TYPE: WALL
+    shutoff: 999
+    pos: !!python/tuple [4.330127018922193, 3.5]
+  *id112:
+    SPACE_TYPE: WALL
+    pos: !!python/tuple [4.330127018922193, 2.5]
+    wall: true
+  *id138:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [4.330127018922193, 1.5]
+  *id118:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [5.196152422706632, 8.0]
+  *id122:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [5.196152422706632, 7.0]
+  *id126:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [5.196152422706632, 6.0]
+  *id130:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [5.196152422706632, 5.0]
+  *id134:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [5.196152422706632, 4.0]
+  *id139:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [5.196152422706632, 3.0]
+  *id142:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [5.196152422706632, 2.0]
+  *id168:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [5.196152422706632, 1.0]
+  *id148:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [6.06217782649107, 7.5]
+  *id152:
+    SPACE_TYPE: WALL
+    pos: !!python/tuple [6.06217782649107, 6.5]
+    wall: true
+  *id156:
+    SPACE_TYPE: WALL
+    shutoff: 999
+    pos: !!python/tuple [6.06217782649107, 5.5]
+  *id160:
+    SPACE_TYPE: WALL
+    pos: !!python/tuple [6.06217782649107, 4.5]
+    wall: true
+  *id164:
+    SPACE_TYPE: PASSAGE
+    DOOR: false
+    pos: !!python/tuple [6.06217782649107, 3.5]
+  *id169:
+    SPACE_TYPE: WALL
+    pos: !!python/tuple [6.06217782649107, 2.5]
+    wall: true
+  *id172:
+    SPACE_TYPE: WALL
+    shutoff: 0
+    pos: !!python/tuple [6.06217782649107, 1.5]
+  *id198:
+    SPACE_TYPE: PASSAGE
+    DOOR: false
+    pos: !!python/tuple [6.06217782649107, 0.5]
+  *id178:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [6.928203230275509, 7.0]
+  *id182:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [6.928203230275509, 6.0]
+  *id186:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [6.928203230275509, 5.0]
+  *id190:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [6.928203230275509, 4.0]
+  *id194:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [6.928203230275509, 3.0]
+  *id199:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [6.928203230275509, 2.0]
+  *id202:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [6.928203230275509, 1.0]
+  *id208:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [7.794228634059947, 6.5]
+  *id212:
+    SPACE_TYPE: WALL
+    pos: !!python/tuple [7.794228634059947, 5.5]
+    wall: true
+  *id216:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [7.794228634059947, 4.5]
+  *id220:
+    SPACE_TYPE: WALL
+    pos: !!python/tuple [7.794228634059947, 3.5]
+    wall: true
+  *id224:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [7.794228634059947, 2.5]
+  *id228:
+    SPACE_TYPE: WALL
+    pos: !!python/tuple [7.794228634059947, 1.5]
+    wall: true
+  *id251:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [8.660254037844386, 7.0]
+  *id234:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [8.660254037844386, 6.0]
+  *id238:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [8.660254037844386, 5.0]
+  *id242:
+    SPACE_TYPE: WALL
+    pos: !!python/tuple [8.660254037844386, 4.0]
+    wall: true
+  *id246:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [8.660254037844386, 3.0]
+  *id250:
+    SPACE_TYPE: WALL
+    shutoff: 4
+    pos: !!python/tuple [8.660254037844386, 2.0]
+  *id273:
+    SPACE_TYPE: PASSAGE
+    DOOR: true
+    pos: !!python/tuple [9.526279441628825, 7.5]
+  *id256:
+    SPACE_TYPE: WALL
+    shutoff: 2
+    pos: !!python/tuple [9.526279441628825, 6.5]
+  *id260:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [9.526279441628825, 5.5]
+  *id264:
+    SPACE_TYPE: WALL
+    pos: !!python/tuple [9.526279441628825, 4.5]
+    wall: true
+  *id268:
+    SPACE_TYPE: WALL
+    pos: !!python/tuple [9.526279441628825, 3.5]
+    wall: true
+  *id272:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [9.526279441628825, 2.5]
+  *id294:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [9.526279441628825, 1.5]
+  *id298:
+    SPACE_TYPE: EXIT
+    GATE: true
+    pos: !!python/tuple [10.392304845413264, 8.0]
+  *id278:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [10.392304845413264, 7.0]
+  *id282:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [10.392304845413264, 6.0]
+  *id286:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [10.392304845413264, 5.0]
+  *id290:
+    SPACE_TYPE: PASSAGE
+    DOOR: false
+    pos: !!python/tuple [10.392304845413264, 4.0]
+  *id295:
+    SPACE_TYPE: FLOOR
+    pos: !!python/tuple [10.392304845413264, 3.0]
+  *id314:
+    SPACE_TYPE: EXIT
+    GATE: false
+    pos: !!python/tuple [10.392304845413264, 1.0]
+adjlist_inner_dict_factory: &id316 !!python/name:builtins.dict ''
+adjlist_outer_dict_factory: *id316
+edge_attr_dict_factory: *id316
+graph: {}
+node_dict_factory: *id316
+nodes: !!python/object:networkx.classes.reportviews.NodeView
+  _nodes: *id317

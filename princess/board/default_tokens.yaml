@@ -1,0 +1,52 @@
+!!python/object:networkx.classes.graph.Graph
+_adj:
+  TOKEN_GATE_00: {}
+  TOKEN_GATE_01: {}
+  TOKEN_GATE_02: {}
+  TOKEN_GATE_03: {}
+  TOKEN_DOOR_00: {}
+  TOKEN_DOOR_01: {}
+  TOKEN_DOOR_02: {}
+  TOKEN_DOOR_03: {}
+  TOKEN_DOOR_04: {}
+  TOKEN_DOOR_05: {}
+  TOKEN_DOOR_06: {}
+  TOKEN_DOOR_07: {}
+  TOKEN_LIGHT_00: {}
+  TOKEN_LIGHT_01: {}
+  TOKEN_LIGHT_02: {}
+  TOKEN_LIGHT_03: {}
+  TOKEN_LIGHT_04: {}
+  TOKEN_LIGHT_05: {}
+  TOKEN_LIGHT_06: {}
+  TOKEN_LIGHT_07: {}
+  TOKEN_CHAR_00: {} # BEAM!
+_node: &id002
+  TOKEN_GATE_00: {token: True, TOKEN_TYPE: GATE, closed: false, start_space: !!python/tuple [0,0]}
+  TOKEN_GATE_01: {token: True, TOKEN_TYPE: GATE, closed: false, start_space: !!python/tuple [12,1]}
+  TOKEN_GATE_02: {token: True, TOKEN_TYPE: GATE, closed: true, start_space: !!python/tuple [0,7]}
+  TOKEN_GATE_03: {token: True, TOKEN_TYPE: GATE, closed: true, start_space: !!python/tuple [12,-6]}
+  TOKEN_DOOR_00: {token: True, TOKEN_TYPE: DOOR, closed: false, start_space: !!python/tuple [0,2]}
+  TOKEN_DOOR_01: {token: True, TOKEN_TYPE: DOOR, closed: true, start_space: !!python/tuple [2,5]}
+  TOKEN_DOOR_02: {token: True, TOKEN_TYPE: DOOR, closed: false, start_space: !!python/tuple [5,-3]}
+  TOKEN_DOOR_03: {token: True, TOKEN_TYPE: DOOR, closed: false, start_space: !!python/tuple [5,0]}
+  TOKEN_DOOR_04: {token: True, TOKEN_TYPE: DOOR, closed: false, start_space: !!python/tuple [7,1]}
+  TOKEN_DOOR_05: {token: True, TOKEN_TYPE: DOOR, closed: false, start_space: !!python/tuple [7,4]}
+  TOKEN_DOOR_06: {token: True, TOKEN_TYPE: DOOR, closed: true, start_space: !!python/tuple [11,-5]}
+  TOKEN_DOOR_07: {token: True, TOKEN_TYPE: DOOR, closed: false, start_space: !!python/tuple [12,-2]}
+  TOKEN_LIGHT_00: {token: True, TOKEN_TYPE: LIGHT, shutoff: 1, start_space: !!python/tuple [1,5]}
+  TOKEN_LIGHT_01: {token: True, TOKEN_TYPE: LIGHT, shutoff: 3, start_space: !!python/tuple [2,0]}
+  TOKEN_LIGHT_02: {token: True, TOKEN_TYPE: LIGHT, shutoff: 0, start_space: !!python/tuple [5,-2]}
+  TOKEN_LIGHT_03: {token: True, TOKEN_TYPE: LIGHT, shutoff: 999, start_space: !!python/tuple [5,2]}
+  TOKEN_LIGHT_04: {token: True, TOKEN_TYPE: LIGHT, shutoff: 999, start_space: !!python/tuple [7,-1]}
+  TOKEN_LIGHT_05: {token: True, TOKEN_TYPE: LIGHT, shutoff: 0, start_space: !!python/tuple [7,3]}
+  TOKEN_LIGHT_06: {token: True, TOKEN_TYPE: LIGHT, shutoff: 4, start_space: !!python/tuple [10,1]}
+  TOKEN_LIGHT_07: {token: True, TOKEN_TYPE: LIGHT, shutoff: 2, start_space: !!python/tuple [11,-4]}
+  TOKEN_CHAR_00: {token: True, TOKEN_TYPE: CHARACTER, char_id: Breadman, start_space: !!python/tuple [6,3], beam: !!python/tuple [0,-1]}
+adjlist_inner_dict_factory: &id001 !!python/name:builtins.dict ''
+adjlist_outer_dict_factory: *id001
+edge_attr_dict_factory: *id001
+graph: {name: BOARD_TOKENS}
+node_dict_factory: *id001
+nodes: !!python/object:networkx.classes.reportviews.NodeView
+  _nodes: *id002
