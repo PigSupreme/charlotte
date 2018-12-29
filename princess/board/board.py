@@ -15,9 +15,13 @@ COLOR_FILE = 'default_colors.yaml'
 with open(COLOR_FILE) as file:
     COLOR = yaml.load(file)
 
-class HexBoard(object):    
+class HexBoard(object):
     SPACE_TYPES = ['EXIT', 'FLOOR', 'LIGHT', 'PASSAGE', 'WALL']
     TOKEN_TYPES = ['GATE', 'DOOR', 'LIGHT', 'CHARACTER']
+    VALID_SPACES = {'GATE': ('EXIT',),
+                    'DOOR': ('PASSAGE',),
+                    'LIGHT': ('WALL',),
+                    'CHARACTER': ('FLOOR','PASSAGE')}
 
     def __init__(self):
         self.graph = nx.Graph()
@@ -30,12 +34,12 @@ class HexBoard(object):
         """Static board elements/spaces only."""
         graph = nx.read_yaml(boardfile)
 
-        # Determine board space types        
+        # Determine board space types
         for stype in HexBoard.SPACE_TYPES:
             self.SPACES[stype] = set()
         for node, stype in nx.get_node_attributes(graph, 'SPACE_TYPE').items():
             self.SPACES[stype].add(node)
-        
+
         self.graph = graph
         # For drawing via networkx
         self.centers = nx.get_node_attributes(graph, 'pos')
@@ -43,28 +47,43 @@ class HexBoard(object):
     def load_tokens(self, tokenfile):
         """Moveable tokens with optional starting spaces."""
         tgraph = nx.read_yaml(tokenfile)
+
+        # Determine token types
         for ttype in HexBoard.TOKEN_TYPES:
             self.tokens[ttype] = list()
-        self.graph = nx.compose(self.graph, tgraph)
-        
-        for token, space in nx.get_node_attributes(tgraph, 'start_space').items():
-            ttype = tgraph.node[token]['TOKEN_TYPE']
-            self.tokens[ttype].append(token)
-            if space and space in self.graph.nodes():
-                self.graph.add_edge(token, space, token=ttype)
-            else:
-                print('Warning: Cannot place %s on space %s.' % (token,space))
+        for token, ttype in nx.get_node_attributes(tgraph, 'TOKEN_TYPE').items():
+            if ttype in HexBoard.TOKEN_TYPES:
+                self.tokens[ttype].append(token)
 
-    def place_token(self, node, token):
-        # Check that node is a valid space
-        # Check that token type is valid for the type of space
-        # Put an edge between token and node; annotate edge somehow...
-        pass
-    
+        # Merge the new token nodes into the actual board graph
+        self.graph = nx.compose(self.graph, tgraph)
+
+        # Place any tokens that have a starting space
+        for token, space in nx.get_node_attributes(tgraph, 'start_space').items():
+            self.place_token(token, space)
+
     def remove_token(self, token):
-        # Check that token is on the board
-        # Remove edge, etc.
-        pass
+        """Remove a token from the board."""
+        # Remove token from previous space
+        old_edges = [(token, oldspace) for oldspace in self.graph[token].keys()]
+        self.graph.remove_edges_from(old_edges)
+
+    def place_token(self, token, space, remove_old=True):
+        """Add or move a token to the given board space."""
+        ttype = self.graph.node[token]['TOKEN_TYPE']
+        # Check that the space is on the board
+        if space not in self.graph.nodes():
+            raise KeyError('Invalid board space %s' % space)
+        else:
+            # Check that the type of token can be placed on this type of space
+            stype = self.graph.node[space]['SPACE_TYPE']
+            if stype not in HexBoard.VALID_SPACES[ttype]:
+                raise ValueError('%s token cannot be placed on %s space' % (ttype,stype))
+            else:
+                if remove_old:
+                    self.remove_token(token)
+                # And place on the new space
+                self.graph.add_edge(token, space, token=ttype)
 
     def compute_exits(self):
         """Exits are OPEN unless a closed GATE token is present."""
@@ -89,11 +108,12 @@ class HexBoard(object):
                 if self.graph.node[token]['closed']:
                     self.closed_passages.add(space)
         self.open_passages = set(self.SPACES['PASSAGE']) - self.closed_passages
-        
+
         self.passage_graph = nx.complete_graph(self.open_passages)
         self.passage_graph.add_nodes_from(self.closed_passages)
-        
+
     def update_reachable(self, *, with_exits=False, with_passages=False, with_walls=False):
+        """Find spaces that we can MOVE onto/through."""
         nodes = self.SPACES['FLOOR'].union(self.SPACES['PASSAGE'])
         if with_exits:
             nodes = nodes.union(self.open_exits)
@@ -102,7 +122,7 @@ class HexBoard(object):
         self.reachable = nx.subgraph(self.graph, nodes)
         if with_passages:
             self.reachable = nx.compose(self.passage_graph, self.reachable)
-        
+
     def compute_radial_lights(self, time):
         """Lights are ON prior to a given shutoff."""
         self.lights_on = set()
@@ -131,6 +151,11 @@ class HexBoard(object):
             self.beams = {source: beam_nodes}
 
     def compute_revealed_spaces(self):
+        """
+        Reveals spaces adjacent to characters/radial lights.
+
+        Note: Beams are handled separately by compute_light_beam() above.
+        """
         check_these = self.SPACES['FLOOR'].union(self.SPACES['PASSAGE'])
         # Revealed by radial lights
         for space in self.lights_on:
@@ -145,6 +170,7 @@ class HexBoard(object):
                     self.revealed.add(adj_node)
 
     def draw_with_nx(self):
+        """Draw the current borad state using networkx defaults."""
         centers = self.centers
 
         # Walkable spaces, including passage entrances
@@ -154,7 +180,7 @@ class HexBoard(object):
         # Walls
         nx.draw_networkx_nodes(self.graph, centers, nodelist=self.SPACES['WALL'],
                 node_color=COLOR['WALL'], node_size = 450)
-        
+
         # Doors and passages
         nx.draw(self.passage_graph, centers, node_size=240, node_color=COLOR['PASSAGE'],
                 edge_color=COLOR['PASSAGE'], width=2)
@@ -166,16 +192,16 @@ class HexBoard(object):
                     edge_color=COLOR['LIGHT_ON'], width=3)
         nx.draw_networkx_nodes(self.graph, centers, nodelist=self.lights_off,
                                node_color=COLOR['LIGHT_OFF'], node_size=125)
-        
+
         # Light beam
         for source, beam in self.beams.items():
             if beam:
                 nx.draw(nx.subgraph(self.graph, [source]+beam), centers, nodelist=beam,
                         node_size=105, node_color=COLOR['BEAM'], edge_color=COLOR['BEAM'], width=3)
-                
+
         # Open exits
         for node in self.open_exits:
-            nx.draw(self.graph, centers, nodelist=[node], node_color=COLOR['EXIT_OPEN'],                   
+            nx.draw(self.graph, centers, nodelist=[node], node_color=COLOR['EXIT_OPEN'],
                     edgelist=self.graph.edges(node), edge_color=COLOR['EXIT_OPEN'], width=3)
         # Closed exits
         for node in self.closed_exits:
@@ -186,9 +212,11 @@ class HexBoard(object):
 ###################
 # Initial Testing
 ###################
+BREADMAN = (6, 3)
 theboard = HexBoard()
 theboard.load_board(BOARD_FILE)
 theboard.load_tokens(TOKEN_FILE)
+theboard.place_token('TOKEN_CHAR_00', BREADMAN)
 theboard.compute_exits()
 theboard.compute_passages()
 theboard.update_reachable()
@@ -197,6 +225,7 @@ theboard.compute_light_beams()
 theboard.compute_revealed_spaces()
 theboard.draw_with_nx()
 nx.draw_networkx_nodes(theboard.graph, theboard.centers, theboard.revealed, node_size=70, node_color='#eeeeee')
+nx.draw_networkx_labels(theboard.graph, theboard.centers, labels={BREADMAN: 'BrM'})
 
 #################################
 # Which spaces can I move to demo
@@ -204,6 +233,9 @@ nx.draw_networkx_nodes(theboard.graph, theboard.centers, theboard.revealed, node
 theboard.update_reachable(with_exits=True, with_passages=True)
 # Subgraph of other walkable nodes within edge distance 3
 K = nx.ego_graph(theboard.reachable, (1,1), 3)
+# Next line needed only for characters that can walk through WALL spaces
+K.remove_nodes_from(theboard.SPACES['WALL'])
 nx.draw(K, theboard.centers, node_size=50, node_color='#1122aa')
+nx.draw_networkx_labels(K, theboard.centers, labels={(1,1): 'MOVE\nSTART'})
 
 plt.show()

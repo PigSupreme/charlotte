@@ -42,7 +42,7 @@ _node: &id002
   TOKEN_LIGHT_05: {token: True, TOKEN_TYPE: LIGHT, shutoff: 0, start_space: !!python/tuple [7,3]}
   TOKEN_LIGHT_06: {token: True, TOKEN_TYPE: LIGHT, shutoff: 4, start_space: !!python/tuple [10,1]}
   TOKEN_LIGHT_07: {token: True, TOKEN_TYPE: LIGHT, shutoff: 2, start_space: !!python/tuple [11,-4]}
-  TOKEN_CHAR_00: {token: True, TOKEN_TYPE: CHARACTER, char_id: Breadman, start_space: !!python/tuple [6,3], beam: !!python/tuple [0,-1]}
+  TOKEN_CHAR_00: {token: True, TOKEN_TYPE: CHARACTER, char_id: Breadman, beam: !!python/tuple [0,-1]}
 adjlist_inner_dict_factory: &id001 !!python/name:builtins.dict ''
 adjlist_outer_dict_factory: *id001
 edge_attr_dict_factory: *id001
